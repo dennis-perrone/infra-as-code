@@ -1,14 +1,5 @@
 # Infrastructure as Code (IaC) with Terraform
 
-## Table of Contents
-* [Initial Setup](#initial-terraform-setup-process)
-* [Deploy Infrastructure](#deploy-infrastructure)
-* [Update Deployment](#make-changes-to-deployed-infrastructure)
-* [Destroy Infrastructure](#destroy-infrastructure)
-* [Variables](#how-to-use-variables)
-* [Outputs](#pull-data-from-output)
-* [References](#references)
-
 ## Initial Terraform setup process
 1. Install ```awscli```.
 2. Run ```aws configure```.
