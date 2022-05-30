@@ -9,11 +9,15 @@
     * ```export AWS_DEFAULT_REGION="<YOUR_AWS_DEFAULT_REGION>"```
 4. Create directory for terraform code.
 5. Move into that directory and create ```main.tf``` file.
-6. Update ```main.tf``` with relevant provider information.
+6. Update ```main.tf``` with relevant provider information and desired state.
 7. Run ```terraform init```.
 8. Format and validate configuration:
     * To format run ```terraform fmt```.
     * To validate run ```terraform validate```
+
+## Plan deployment
+1. Run ```terraform plan``` and review output.
+2. Make changes to ```main.tf``` if there are any errors.
 
 ## Deploy infrastructure
 1. Once above is done, run ```terraform apply```.
@@ -45,5 +49,6 @@
 5. To view just defined output, run ```terraform output```.
 
 ## References
-1. [HashiCorp Terraform Tutorial](https://learn.hashicorp.com/tutorials/terraform/aws-outputs?in=terraform/aws-get-started)
+* [AWS CLI Configuration](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html#cli-configure-quickstart-format) 
+* [HashiCorp Terraform Tutorial](https://learn.hashicorp.com/tutorials/terraform/aws-outputs?in=terraform/aws-get-started)
 
