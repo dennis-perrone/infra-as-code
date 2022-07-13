@@ -28,6 +28,7 @@ resource "aws_security_group" "instance" {
   tags = {
     Name      = "allow_ssh_http"
     CreatedBy = "Terraform"
+    ManagedBy = "Terraform"
   }
 
 }

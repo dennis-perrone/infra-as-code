@@ -15,7 +15,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "web_server" {
-  ami                    = "ami-0022f774911c1d690"
+  ami                    = var.ami
   instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.instance.id]
 
@@ -23,13 +23,14 @@ resource "aws_instance" "web_server" {
               #!/bin/bash
               sudo yum -y update
               sudo yum -y install httpd
-              echo "Hello, World from Terraform" > index.html
+              echo "Hello, World from Terraform" > /var/www/html/index.html
               sudo systemctl enable httpd.service --now
               EOF
 
   tags = {
     Name      = var.instance_name
-    Terraform = "true"
+    CreatedBy = "Terraform"
+    ManagedBy = "Terraform"
   }
 }
 
